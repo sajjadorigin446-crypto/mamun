@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>About | MD Abdul Al Mamun</title>
 
+<meta name="description"
+content="Learn more about MD Abdul Al Mamun, his background, education, digital journey, professional mindset and career direction.">
+
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -18,536 +23,649 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#050505;
-    color:#fff;
-    line-height:1.6;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#060606;
+    color:#f5f5f5;
+    line-height:1.7;
 }
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
 
 /* ================= HEADER ================= */
 
 header{
     position:sticky;
     top:0;
-    z-index:9999;
-    background:rgba(5,5,5,.92);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid rgba(212,175,55,.15);
+    z-index:1000;
+    background:rgba(6,6,6,.94);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(212,175,55,.18);
 }
 
-.navbar{
-    max-width:1180px;
-    margin:auto;
-    padding:18px 25px;
-
+.nav{
+    min-height:70px;
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
 .logo{
-    color:#d4af37;
-    font-size:23px;
+    font-size:22px;
     font-weight:800;
     letter-spacing:2px;
+    color:#d4af37;
 }
 
-.nav-links{
+.menu{
     display:flex;
-    align-items:center;
-    gap:22px;
+    gap:24px;
 }
 
-.nav-links a{
-    color:#bdbdbd;
-    text-decoration:none;
+.menu a{
+    color:#ccc;
     font-size:14px;
     transition:.3s;
 }
 
-.nav-links a:hover{
+.menu a:hover,
+.menu a.active{
     color:#d4af37;
 }
 
-.nav-links a.active{
-    color:#d4af37;
-}
-
-/* MOBILE BUTTON */
-
-.menu-btn{
+.hamburger{
     display:none;
-    border:0;
-    background:none;
+    font-size:27px;
     color:#d4af37;
-    font-size:29px;
     cursor:pointer;
 }
 
-/* MOBILE MENU */
-
-.mobile-menu{
-    display:none;
-    max-width:1180px;
-    margin:auto;
-    padding:5px 25px 20px;
-}
-
-.mobile-menu a{
-    display:block;
-    padding:11px 0;
-    color:#ccc;
-    text-decoration:none;
-    border-bottom:1px solid #1d1d1d;
-}
-
-.mobile-menu a.active{
-    color:#d4af37;
-}
 
 /* ================= HERO ================= */
 
-.about-hero{
-    max-width:1180px;
-    margin:auto;
-    padding:85px 25px 65px;
+.hero{
+    padding:105px 0 70px;
+    background:
+    radial-gradient(circle at 70% 20%,
+    rgba(212,175,55,.12),
+    transparent 35%);
 }
 
-.hero-small{
+.hero .small-title{
     color:#d4af37;
-    font-size:13px;
+    font-size:12px;
+    letter-spacing:4px;
     font-weight:bold;
-    letter-spacing:3px;
     margin-bottom:15px;
 }
 
-.about-hero h1{
-    font-size:58px;
-    line-height:1.1;
-    margin-bottom:18px;
+.hero h1{
+    font-size:clamp(45px,7vw,80px);
+    line-height:1;
+    margin-bottom:25px;
 }
 
-.about-hero h1 span{
+.hero h1 span{
     color:#d4af37;
 }
 
 .hero-text{
-    max-width:650px;
-    color:#929292;
-    font-size:16px;
+    max-width:720px;
+    color:#999;
+    font-size:17px;
 }
+
 
 /* ================= PROFILE ================= */
 
 .profile-section{
-    max-width:1180px;
-    margin:auto;
-    padding:10px 25px 90px;
-}
-
-.profile-card{
-    background:linear-gradient(
-        145deg,
-        #101010,
-        #080808
-    );
-
-    border:1px solid #202020;
-    border-radius:22px;
-    padding:50px;
-
     display:grid;
-    grid-template-columns:340px 1fr;
-    gap:70px;
+    grid-template-columns:360px 1fr;
+    gap:75px;
     align-items:center;
-
-    box-shadow:0 25px 70px rgba(0,0,0,.4);
+    padding:45px 0 110px;
 }
+
 
 /* PHOTO */
 
-.photo-area{
+.photo-wrapper{
     display:flex;
     justify-content:center;
 }
 
 .photo-frame{
-    width:290px;
-    height:290px;
-
+    width:300px;
+    height:370px;
     padding:6px;
-
-    background:#0a0a0a;
-
-    border:2px solid #d4af37;
-    border-radius:18px;
-
+    border:1px solid #d4af37;
+    border-radius:20px;
+    background:linear-gradient(
+        145deg,
+        #d4af37,
+        #665214,
+        #d4af37
+    );
     box-shadow:
-        0 0 0 7px rgba(212,175,55,.05),
-        0 15px 50px rgba(0,0,0,.5);
+    0 0 50px rgba(212,175,55,.12);
+    position:relative;
+}
 
-    overflow:hidden;
+.photo-frame::after{
+    content:"";
+    position:absolute;
+    inset:-12px;
+    border:1px solid rgba(212,175,55,.12);
+    border-radius:25px;
+    pointer-events:none;
 }
 
 .photo-frame img{
     width:100%;
     height:100%;
-
-    display:block;
-
     object-fit:cover;
-
-    border-radius:11px;
+    border-radius:14px;
+    display:block;
+    background:#111;
 }
 
-/* IF PHOTO DOESN'T EXIST */
 
-.photo-placeholder{
-    width:100%;
-    height:100%;
+/* PROFILE TEXT */
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
-
-    border-radius:11px;
-
-    background:#0d0d0d;
-
-    color:#666;
-    font-size:14px;
-}
-
-/* PROFILE CONTENT */
-
-.profile-content h2{
-    font-size:38px;
-    line-height:1.2;
-    margin-bottom:8px;
-}
-
-.profile-content h2 span{
+.profile-info .tag{
+    display:inline-block;
     color:#d4af37;
-}
-
-.role{
-    color:#d4af37;
-    font-size:14px;
-    font-weight:bold;
+    border:1px solid rgba(212,175,55,.35);
+    padding:7px 15px;
+    border-radius:30px;
+    font-size:10px;
     letter-spacing:2px;
-    margin-bottom:22px;
+    margin-bottom:18px;
 }
 
-.profile-content p{
-    max-width:650px;
-    color:#9b9b9b;
-    font-size:15px;
-    margin-bottom:30px;
+.profile-info h2{
+    font-size:42px;
+    line-height:1.2;
+    margin-bottom:7px;
 }
+
+.profile-info h3{
+    color:#d4af37;
+    font-size:12px;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+
+.profile-info p{
+    color:#999;
+    max-width:720px;
+    margin-bottom:18px;
+}
+
 
 /* INFO */
 
 .info-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:14px;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:28px;
 }
 
 .info-box{
+    background:#0d0d0d;
+    border:1px solid #202020;
     padding:17px;
-
-    background:#0b0b0b;
-
-    border:1px solid #222;
-    border-radius:12px;
-
+    border-radius:10px;
     transition:.3s;
 }
 
 .info-box:hover{
-    border-color:#d4af37;
+    border-color:rgba(212,175,55,.4);
     transform:translateY(-3px);
 }
 
-.info-box strong{
+.info-box small{
     display:block;
-    color:#d4af37;
-    font-size:12px;
-    letter-spacing:1px;
+    color:#666;
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
     margin-bottom:5px;
 }
 
-.info-box span{
-    color:#ddd;
-    font-size:14px;
+.info-box strong{
+    font-size:13px;
+    color:#eee;
 }
 
-/* ================= EDUCATION ================= */
 
-.education-section{
-    max-width:1180px;
-    margin:auto;
-    padding:0 25px 100px;
+/* ================= COMMON SECTION ================= */
+
+section{
+    padding:90px 0;
 }
 
-.section-heading{
-    margin-bottom:40px;
+.section-header{
+    margin-bottom:45px;
 }
 
-.section-heading small{
+.section-label{
     color:#d4af37;
+    font-size:11px;
     letter-spacing:3px;
-    font-size:12px;
+    font-weight:bold;
 }
 
-.section-heading h2{
+.section-header h2{
     font-size:38px;
     margin-top:8px;
 }
 
-.section-heading h2 span{
-    color:#d4af37;
+.section-header p{
+    color:#888;
+    max-width:700px;
+    margin-top:10px;
 }
+
+
+/* ================= WHO I AM ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+}
+
+.about-card{
+    padding:32px;
+    background:#0c0c0c;
+    border:1px solid #1d1d1d;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.about-card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(212,175,55,.4);
+}
+
+.about-icon{
+    font-size:27px;
+    margin-bottom:15px;
+}
+
+.about-card h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.about-card p{
+    color:#999;
+    font-size:14px;
+}
+
+
+/* ================= DIGITAL JOURNEY ================= */
+
+.journey{
+    max-width:900px;
+    margin:auto;
+    position:relative;
+}
+
+.journey::before{
+    content:"";
+    position:absolute;
+    left:18px;
+    top:0;
+    bottom:0;
+    width:1px;
+    background:#292929;
+}
+
+.journey-item{
+    position:relative;
+    padding-left:60px;
+    margin-bottom:35px;
+}
+
+.journey-dot{
+    position:absolute;
+    left:10px;
+    top:5px;
+    width:17px;
+    height:17px;
+    border-radius:50%;
+    background:#d4af37;
+    box-shadow:0 0 0 5px rgba(212,175,55,.08);
+}
+
+.journey-item h3{
+    font-size:19px;
+    margin-bottom:5px;
+}
+
+.journey-item p{
+    color:#888;
+    font-size:14px;
+}
+
+
+/* ================= MINDSET ================= */
+
+.mindset-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.mindset-card{
+    padding:28px;
+    background:#0c0c0c;
+    border:1px solid #1d1d1d;
+    border-radius:14px;
+}
+
+.mindset-number{
+    color:#d4af37;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+.mindset-card h3{
+    margin:10px 0 7px;
+}
+
+.mindset-card p{
+    color:#888;
+    font-size:14px;
+}
+
+
+/* ================= EDUCATION ================= */
 
 .education-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
     gap:18px;
 }
 
 .edu-card{
-    position:relative;
-
-    padding:28px;
-
-    background:#0c0c0c;
-
+    background:#0d0d0d;
     border:1px solid #202020;
     border-radius:15px;
-
-    overflow:hidden;
-
+    padding:28px;
     transition:.3s;
 }
 
-.edu-card::before{
-    content:"";
-
-    position:absolute;
-    left:0;
-    top:0;
-
-    width:3px;
-    height:100%;
-
-    background:#d4af37;
-}
-
 .edu-card:hover{
-    transform:translateY(-4px);
-    border-color:#383838;
+    transform:translateY(-5px);
+    border-color:rgba(212,175,55,.45);
 }
 
 .edu-year{
     color:#d4af37;
-    font-size:12px;
+    font-size:11px;
+    letter-spacing:2px;
     font-weight:bold;
-    letter-spacing:1px;
-    margin-bottom:9px;
 }
 
 .edu-card h3{
-    font-size:20px;
-    margin-bottom:6px;
+    margin:9px 0 5px;
+    font-size:19px;
 }
 
 .edu-card p{
-    color:#858585;
+    color:#888;
     font-size:14px;
 }
+
+
+/* ================= CAREER ================= */
+
+.career{
+    background:
+    radial-gradient(circle at 50% 0,
+    rgba(212,175,55,.08),
+    transparent 50%);
+    border-top:1px solid #161616;
+    border-bottom:1px solid #161616;
+}
+
+.career-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.career-box h2{
+    font-size:35px;
+    margin:12px 0;
+}
+
+.career-box p{
+    color:#999;
+    max-width:720px;
+    margin:auto;
+}
+
+.career-points{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:28px;
+}
+
+.career-point{
+    padding:9px 15px;
+    border:1px solid #292929;
+    border-radius:30px;
+    color:#bbb;
+    font-size:12px;
+}
+
+
+/* ================= QUICK OVERVIEW ================= */
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.quick-card{
+    background:#0c0c0c;
+    border:1px solid #1d1d1d;
+    border-radius:12px;
+    padding:24px;
+    text-align:center;
+}
+
+.quick-card strong{
+    display:block;
+    color:#d4af37;
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+.quick-card span{
+    color:#888;
+    font-size:12px;
+}
+
 
 /* ================= CTA ================= */
 
 .cta{
-    max-width:1180px;
-    margin:auto;
-    padding:0 25px 90px;
-}
-
-.cta-box{
-    background:linear-gradient(
-        135deg,
-        #12100a,
-        #080808
-    );
-
-    border:1px solid rgba(212,175,55,.25);
-    border-radius:20px;
-
-    padding:45px;
-
     text-align:center;
+    padding:70px 25px;
+    border:1px solid rgba(212,175,55,.2);
+    border-radius:20px;
+    background:
+    linear-gradient(
+        145deg,
+        rgba(212,175,55,.08),
+        rgba(255,255,255,.01)
+    );
 }
 
-.cta-box h2{
-    font-size:30px;
+.cta h2{
+    font-size:38px;
     margin-bottom:10px;
 }
 
-.cta-box p{
+.cta p{
     color:#888;
     margin-bottom:25px;
 }
 
-.cta-btn{
+.btn{
     display:inline-block;
-
-    padding:13px 28px;
-
-    border:1px solid #d4af37;
-    border-radius:8px;
-
-    color:#d4af37;
-    text-decoration:none;
-
-    font-size:14px;
+    padding:13px 26px;
+    background:#d4af37;
+    color:#050505;
+    border-radius:30px;
     font-weight:bold;
-
+    font-size:13px;
     transition:.3s;
 }
 
-.cta-btn:hover{
-    background:#d4af37;
-    color:#050505;
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(212,175,55,.2);
 }
 
-/* ================= FOOTER ================= */
-
-footer{
-    border-top:1px solid #1b1b1b;
-
-    padding:28px 20px;
-
-    text-align:center;
-
-    color:#666;
-    font-size:13px;
-}
 
 /* ================= WHATSAPP ================= */
 
 .whatsapp{
     position:fixed;
-
     right:20px;
     bottom:20px;
-
-    width:53px;
-    height:53px;
-
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
-
-    background:#25D366;
-    color:#fff;
-
-    border-radius:50%;
-
-    text-decoration:none;
-
-    font-size:24px;
-
+    font-size:22px;
     z-index:999;
-
     box-shadow:0 8px 25px rgba(0,0,0,.4);
 }
 
-/* ================= RESPONSIVE ================= */
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    padding:32px 20px;
+    color:#666;
+    font-size:13px;
+    border-top:1px solid #181818;
+}
+
+footer span{
+    color:#d4af37;
+}
+
+
+/* ================= MOBILE ================= */
 
 @media(max-width:900px){
 
-    .nav-links{
+    .menu{
         display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#080808;
+        flex-direction:column;
+        padding:20px;
+        border-bottom:1px solid #222;
     }
 
-    .menu-btn{
+    .menu.show{
+        display:flex;
+    }
+
+    .hamburger{
         display:block;
-    }
-
-    .mobile-menu.show{
-        display:block;
-    }
-
-    .about-hero{
-        padding:60px 20px 45px;
-    }
-
-    .about-hero h1{
-        font-size:44px;
     }
 
     .profile-section{
-        padding:10px 20px 65px;
-    }
-
-    .profile-card{
         grid-template-columns:1fr;
-        gap:40px;
-        padding:35px 25px;
+        gap:50px;
         text-align:center;
     }
 
-    .profile-content p{
+    .photo-wrapper{
+        order:-1;
+    }
+
+    .profile-info p{
         margin-left:auto;
         margin-right:auto;
     }
 
-    .education-section{
-        padding:0 20px 70px;
+    .about-grid,
+    .mindset-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .education-grid{
-        grid-template-columns:1fr;
+    .quick-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .cta{
-        padding:0 20px 70px;
-    }
 }
 
-@media(max-width:500px){
 
-    .navbar{
-        padding:16px 18px;
+@media(max-width:600px){
+
+    .container{
+        width:92%;
     }
 
-    .mobile-menu{
-        padding-left:18px;
-        padding-right:18px;
+    .hero{
+        padding:75px 0 45px;
     }
 
-    .about-hero h1{
-        font-size:38px;
+    .hero h1{
+        font-size:48px;
     }
 
     .hero-text{
-        font-size:14px;
+        font-size:15px;
     }
 
-    .profile-card{
-        padding:28px 18px;
+    .profile-section{
+        padding-top:25px;
     }
 
     .photo-frame{
-        width:245px;
-        height:245px;
+        width:250px;
+        height:310px;
     }
 
-    .profile-content h2{
-        font-size:29px;
+    .profile-info h2{
+        font-size:31px;
+    }
+
+    .profile-info h3{
+        line-height:1.7;
     }
 
     .info-grid{
@@ -555,325 +673,907 @@ footer{
         text-align:left;
     }
 
-    .section-heading h2{
+    .about-grid,
+    .mindset-grid,
+    .education-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quick-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .section-header h2{
         font-size:30px;
     }
 
-    .cta-box{
-        padding:35px 20px;
+    .career-box h2{
+        font-size:28px;
     }
 
-    .cta-box h2{
-        font-size:25px;
+    .cta h2{
+        font-size:29px;
     }
 
-    .whatsapp{
-        width:49px;
-        height:49px;
-        right:16px;
-        bottom:16px;
-    }
 }
+
+
+@media(max-width:380px){
+
+    .quick-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
 </style>
+
 </head>
 
+
 <body>
+
 
 <!-- ================= HEADER ================= -->
 
 <header>
 
-<div class="navbar">
+<div class="container nav">
 
-    <div class="logo">MAMUN.</div>
+<a href="index.html" class="logo">
+MAMUN.
+</a>
 
-    <nav class="nav-links">
-
-        <a href="index.html">Home</a>
-
-        <a href="about.html" class="active">About</a>
-
-        <a href="skills.html">Skills</a>
-
-        <a href="services.html">Services</a>
-
-        <a href="projects.html">Projects</a>
-
-        <a href="experience.html">Experience</a>
-
-        <a href="resume.html">Resume</a>
-
-        <a href="contact.html">Contact</a>
-
-    </nav>
-
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
+<div class="hamburger" onclick="toggleMenu()">
+☰
 </div>
 
-<div class="mobile-menu" id="mobileMenu">
+<nav class="menu" id="menu">
 
-    <a href="index.html">Home</a>
+<a href="index.html">Home</a>
 
-    <a href="about.html" class="active">About</a>
+<a href="about.html" class="active">
+About
+</a>
 
-    <a href="skills.html">Skills</a>
+<a href="skills.html">
+Skills
+</a>
 
-    <a href="services.html">Services</a>
+<a href="services.html">
+Services
+</a>
 
-    <a href="projects.html">Projects</a>
+<a href="projects.html">
+Projects
+</a>
 
-    <a href="experience.html">Experience</a>
+<a href="experience.html">
+Experience
+</a>
 
-    <a href="resume.html">Resume</a>
+<a href="resume.html">
+Resume
+</a>
 
-    <a href="contact.html">Contact</a>
+<a href="contact.html">
+Contact
+</a>
+
+</nav>
 
 </div>
 
 </header>
 
 
+
 <!-- ================= HERO ================= -->
 
-<section class="about-hero">
+<section class="hero">
 
-    <div class="hero-small">
-        GET TO KNOW ME
-    </div>
+<div class="container">
 
-    <h1>
-        About <span>Me.</span>
-    </h1>
+<div class="small-title">
+GET TO KNOW ME
+</div>
 
-    <p class="hero-text">
-        A digital service professional focused on creative,
-        digital and online work — turning ideas into meaningful
-        digital experiences.
-    </p>
+<h1>
+About <span>Me.</span>
+</h1>
 
-</section>
-
-
-<!-- ================= PROFILE ================= -->
-
-<section class="profile-section">
-
-<div class="profile-card">
-
-    <!-- PHOTO -->
-
-    <div class="photo-area">
-
-        <div class="photo-frame">
-
-            <img
-                src="mamun1.jpg"
-                alt="MD Abdul Al Mamun"
-                onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';"
-            >
-
-            <div
-                class="photo-placeholder"
-                id="photoPlaceholder"
-                style="display:none;"
-            >
-                <div>
-                    <strong>PROFILE PHOTO</strong>
-                    <br>
-                    <small>Add mamun1.jpg</small>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- CONTENT -->
-
-    <div class="profile-content">
-
-        <h2>
-            MD Abdul Al <span>Mamun</span>
-        </h2>
-
-        <div class="role">
-            DIGITAL SERVICE
-        </div>
-
-        <p>
-            I am focused on digital and creative work, with
-            interests in Graphic Design, Digital Marketing and
-            Web Design. I enjoy creating clean, useful and
-            engaging digital experiences while continuously
-            developing my skills.
-        </p>
-
-
-        <div class="info-grid">
-
-            <div class="info-box">
-                <strong>LOCATION</strong>
-                <span>Chattogram, Bangladesh</span>
-            </div>
-
-            <div class="info-box">
-                <strong>FOCUS</strong>
-                <span>Digital & Creative Work</span>
-            </div>
-
-            <div class="info-box">
-                <strong>EDUCATION</strong>
-                <span>Honours — History</span>
-            </div>
-
-            <div class="info-box">
-                <strong>CURRENT YEAR</strong>
-                <span>3rd Year</span>
-            </div>
-
-        </div>
-
-    </div>
+<p class="hero-text">
+A digital-focused creative professional building skills across
+design, digital marketing and modern web experiences.
+</p>
 
 </div>
 
 </section>
 
 
-<!-- ================= EDUCATION ================= -->
 
-<section class="education-section">
+<!-- ================= PROFILE ================= -->
 
-    <div class="section-heading">
+<main class="container">
 
-        <small>MY JOURNEY</small>
-
-        <h2>
-            Education <span>& Learning</span>
-        </h2>
-
-    </div>
+<section class="profile-section">
 
 
-    <div class="education-grid">
+<div class="photo-wrapper">
 
-        <div class="edu-card">
+<div class="photo-frame">
 
-            <div class="edu-year">
-                2022 — PRESENT
-            </div>
+<img
+src="mamun1.jpg"
+alt="MD Abdul Al Mamun">
 
-            <h3>
-                Honours — History
-            </h3>
+</div>
 
-            <p>
-                Rangamati Government College
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="edu-card">
 
-            <div class="edu-year">
-                2022
-            </div>
+<div class="profile-info">
 
-            <h3>
-                Higher Secondary Certificate
-            </h3>
+<div class="tag">
+DIGITAL SERVICE
+</div>
 
-            <p>
-                Govt. Ashekane Aulia College
-            </p>
+<h2>
+MD Abdul Al Mamun
+</h2>
 
-        </div>
-
-
-        <div class="edu-card">
-
-            <div class="edu-year">
-                2020
-            </div>
-
-            <h3>
-                Secondary School Certificate
-            </h3>
-
-            <p>
-                Rahmania High School
-            </p>
-
-        </div>
+<h3>
+GRAPHIC DESIGN · DIGITAL MARKETING · WEB DESIGN
+</h3>
 
 
-        <div class="edu-card">
+<p>
+I’m a creative and digital-focused professional who enjoys
+turning ideas into clean, meaningful and engaging digital
+experiences.
+</p>
 
-            <div class="edu-year">
-                COMPLETED
-            </div>
+<p>
+My interests combine visual creativity, digital communication,
+online business and modern web experiences. I enjoy learning
+new tools and applying what I learn through practical projects.
+</p>
 
-            <h3>
-                Freelancing Course
-            </h3>
+<p>
+Rather than limiting myself to one area, I’m building a broader
+digital skill set that allows me to understand design, marketing,
+content and web-based work from different perspectives.
+</p>
 
-            <p>
-                E-Learning & Earning Ltd.
-            </p>
 
-        </div>
 
-    </div>
+<div class="info-grid">
+
+<div class="info-box">
+
+<small>
+Location
+</small>
+
+<strong>
+Chattogram, Bangladesh
+</strong>
+
+</div>
+
+
+<div class="info-box">
+
+<small>
+Professional Focus
+</small>
+
+<strong>
+Digital Service
+</strong>
+
+</div>
+
+
+<div class="info-box">
+
+<small>
+Education
+</small>
+
+<strong>
+Honours — History
+</strong>
+
+</div>
+
+
+<div class="info-box">
+
+<small>
+Current Academic Level
+</small>
+
+<strong>
+3rd Year
+</strong>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
+
+
+
+<!-- ================= WHO I AM ================= -->
+
+<section>
+
+<div class="section-header">
+
+<div class="section-label">
+WHO I AM
+</div>
+
+<h2>
+More Than a Job Title.
+</h2>
+
+<p>
+My professional identity is shaped by creativity, curiosity,
+continuous learning and practical experience.
+</p>
+
+</div>
+
+
+<div class="about-grid">
+
+
+<div class="about-card">
+
+<div class="about-icon">
+🎨
+</div>
+
+<h3>
+Creative Mindset
+</h3>
+
+<p>
+I enjoy exploring visual ideas, layouts, digital content and
+different ways of presenting information clearly and effectively.
+</p>
+
+</div>
+
+
+
+<div class="about-card">
+
+<div class="about-icon">
+💻
+</div>
+
+<h3>
+Digital Focus
+</h3>
+
+<p>
+I’m developing practical knowledge across web design, digital
+marketing, social media and other areas of the digital ecosystem.
+</p>
+
+</div>
+
+
+
+<div class="about-card">
+
+<div class="about-icon">
+📚
+</div>
+
+<h3>
+Always Learning
+</h3>
+
+<p>
+Technology and digital work are constantly changing, so I believe
+continuous learning is an important part of professional growth.
+</p>
+
+</div>
+
+
+
+<div class="about-card">
+
+<div class="about-icon">
+🚀
+</div>
+
+<h3>
+Growth Oriented
+</h3>
+
+<p>
+I want every project and experience to help me become more
+skilled, more organized and more confident in my work.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= DIGITAL JOURNEY ================= -->
+
+<section>
+
+<div class="section-header">
+
+<div class="section-label">
+MY DIGITAL JOURNEY
+</div>
+
+<h2>
+A Journey Still in Progress.
+</h2>
+
+<p>
+My digital career is developing step by step through learning,
+practice, real-world exposure and personal projects.
+</p>
+
+</div>
+
+
+<div class="journey">
+
+
+<div class="journey-item">
+
+<div class="journey-dot"></div>
+
+<h3>
+Exploring
+</h3>
+
+<p>
+Started developing an interest in creative work, digital platforms
+and online opportunities.
+</p>
+
+</div>
+
+
+
+<div class="journey-item">
+
+<div class="journey-dot"></div>
+
+<h3>
+Learning
+</h3>
+
+<p>
+Built foundational knowledge in graphic design, digital marketing,
+freelancing and online work.
+</p>
+
+</div>
+
+
+
+<div class="journey-item">
+
+<div class="journey-dot"></div>
+
+<h3>
+Practicing
+</h3>
+
+<p>
+Started applying knowledge through personal projects, creative work
+and practical digital activities.
+</p>
+
+</div>
+
+
+
+<div class="journey-item">
+
+<div class="journey-dot"></div>
+
+<h3>
+Building
+</h3>
+
+<p>
+Developing websites, portfolio projects and a stronger professional
+digital presence.
+</p>
+
+</div>
+
+
+
+<div class="journey-item">
+
+<div class="journey-dot"></div>
+
+<h3>
+Growing
+</h3>
+
+<p>
+Continuously improving technical, creative and professional skills
+with the goal of building a sustainable digital career.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= PROFESSIONAL MINDSET ================= -->
+
+<section>
+
+<div class="section-header">
+
+<div class="section-label">
+PROFESSIONAL MINDSET
+</div>
+
+<h2>
+How I Approach My Work.
+</h2>
+
+<p>
+The way I work is influenced by a few principles that help me
+stay focused and keep improving.
+</p>
+
+</div>
+
+
+<div class="mindset-grid">
+
+
+<div class="mindset-card">
+
+<div class="mindset-number">
+01 — RESPONSIBILITY
+</div>
+
+<h3>
+Take Ownership
+</h3>
+
+<p>
+I believe every task deserves attention, responsibility and a
+genuine effort to produce a useful result.
+</p>
+
+</div>
+
+
+
+<div class="mindset-card">
+
+<div class="mindset-number">
+02 — QUALITY
+</div>
+
+<h3>
+Details Matter
+</h3>
+
+<p>
+Small details can influence the overall quality of a design,
+website or digital presentation.
+</p>
+
+</div>
+
+
+
+<div class="mindset-card">
+
+<div class="mindset-number">
+03 — ADAPTABILITY
+</div>
+
+<h3>
+Stay Flexible
+</h3>
+
+<p>
+Digital work changes quickly, so I try to remain open to new
+tools, ideas and better approaches.
+</p>
+
+</div>
+
+
+
+<div class="mindset-card">
+
+<div class="mindset-number">
+04 — LEARNING
+</div>
+
+<h3>
+Keep Improving
+</h3>
+
+<p>
+Every project can reveal something new. I use experience as an
+opportunity to improve future work.
+</p>
+
+</div>
+
+
+
+<div class="mindset-card">
+
+<div class="mindset-number">
+05 — COMMUNICATION
+</div>
+
+<h3>
+Understand First
+</h3>
+
+<p>
+Clear communication and understanding the actual requirement
+are important before starting any project.
+</p>
+
+</div>
+
+
+
+<div class="mindset-card">
+
+<div class="mindset-number">
+06 — CONSISTENCY
+</div>
+
+<h3>
+Build Step by Step
+</h3>
+
+<p>
+Professional growth takes time. I believe consistent learning
+and practice create stronger long-term results.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section>
+
+<div class="section-header">
+
+<div class="section-label">
+MY BACKGROUND
+</div>
+
+<h2>
+Education & Learning.
+</h2>
+
+<p>
+My academic background and professional learning both contribute
+to the way I approach digital work.
+</p>
+
+</div>
+
+
+<div class="education-grid">
+
+
+<div class="edu-card">
+
+<div class="edu-year">
+CURRENT
+</div>
+
+<h3>
+Honours — History
+</h3>
+
+<p>
+Rangamati Government College
+</p>
+
+</div>
+
+
+
+<div class="edu-card">
+
+<div class="edu-year">
+2022
+</div>
+
+<h3>
+Higher Secondary Certificate
+</h3>
+
+<p>
+Govt. Ashekane Aulia College
+</p>
+
+</div>
+
+
+
+<div class="edu-card">
+
+<div class="edu-year">
+2020
+</div>
+
+<h3>
+Secondary School Certificate
+</h3>
+
+<p>
+Rahmania High School
+</p>
+
+</div>
+
+
+
+<div class="edu-card">
+
+<div class="edu-year">
+COMPLETED
+</div>
+
+<h3>
+Freelancing Course
+</h3>
+
+<p>
+E-Learning & Earning Ltd.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= QUICK OVERVIEW ================= -->
+
+<section>
+
+<div class="section-header">
+
+<div class="section-label">
+QUICK OVERVIEW
+</div>
+
+<h2>
+At a Glance.
+</h2>
+
+</div>
+
+
+<div class="quick-grid">
+
+
+<div class="quick-card">
+
+<strong>
+01
+</strong>
+
+<span>
+Professional Focus
+</span>
+
+</div>
+
+
+
+<div class="quick-card">
+
+<strong>
+03+
+</strong>
+
+<span>
+Core Digital Areas
+</span>
+
+</div>
+
+
+
+<div class="quick-card">
+
+<strong>
+01
+</strong>
+
+<span>
+Portfolio Journey
+</span>
+
+</div>
+
+
+
+<div class="quick-card">
+
+<strong>
+∞
+</strong>
+
+<span>
+Learning Mindset
+</span>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- ================= CAREER ================= -->
+
+<section class="career">
+
+<div class="container">
+
+<div class="career-box">
+
+<div class="section-label">
+CAREER DIRECTION
+</div>
+
+<h2>
+Building a Digital Career.
+</h2>
+
+<p>
+My long-term direction is focused on developing strong practical
+skills in digital services while building meaningful experience
+through real-world work, personal projects and continuous learning.
+</p>
+
+
+<div class="career-points">
+
+<div class="career-point">
+Graphic Design
+</div>
+
+<div class="career-point">
+Digital Marketing
+</div>
+
+<div class="career-point">
+Web Design
+</div>
+
+<div class="career-point">
+Social Media
+</div>
+
+<div class="career-point">
+Freelancing
+</div>
+
+<div class="career-point">
+Digital Projects
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 
 
 <!-- ================= CTA ================= -->
 
-<section class="cta">
+<section>
 
-    <div class="cta-box">
+<div class="container">
 
-        <h2>
-            Let's Work Together
-        </h2>
+<div class="cta">
 
-        <p>
-            Have a project or idea in mind?
-            Let's turn it into something meaningful.
-        </p>
+<h2>
+Let’s Create Something Meaningful.
+</h2>
 
-        <a href="contact.html" class="cta-btn">
-            Contact Me
-        </a>
+<p>
+Have an idea, project or opportunity? I’d be happy to connect
+and explore how we can work together.
+</p>
 
-    </div>
+<a href="contact.html" class="btn">
+Contact Me
+</a>
+
+</div>
+
+</div>
 
 </section>
+
 
 
 <!-- ================= WHATSAPP ================= -->
 
 <a
-    class="whatsapp"
-    href="https://wa.me/8801679606860"
-    target="_blank"
-    aria-label="WhatsApp"
->
-    ☏
+href="https://wa.me/8801679606860"
+class="whatsapp"
+target="_blank"
+aria-label="WhatsApp">
+
+☎
+
 </a>
+
 
 
 <!-- ================= FOOTER ================= -->
 
 <footer>
 
-    © 2026 MD Abdul Al Mamun. All Rights Reserved.
+© 2026
+<span>MD Abdul Al Mamun</span>.
+All Rights Reserved.
 
 </footer>
+
 
 
 <script>
@@ -881,13 +1581,14 @@ footer{
 function toggleMenu(){
 
     document
-    .getElementById("mobileMenu")
+    .getElementById("menu")
     .classList
     .toggle("show");
 
 }
 
 </script>
+
 
 </body>
 </html>
